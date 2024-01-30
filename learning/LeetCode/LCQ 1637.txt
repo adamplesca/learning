@@ -1,0 +1,18 @@
+// Runtime: 38ms
+// Memory: 73.18mb
+
+import java.util.Arrays;
+
+class Solution {
+    public int maxWidthOfVerticalArea(int[][] points) {
+        int n = points.length;
+        Arrays.sort(points, (a, b) -> a[0] - b[0]);
+        int maxGap = 0;
+        for (int i = 1; i < n; i++) {
+            int gap = points[i][0] - points[i - 1][0];
+            maxGap = Math.max(maxGap, gap);
+        }
+        return maxGap;
+    }
+}
+
