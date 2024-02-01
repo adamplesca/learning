@@ -1,7 +1,6 @@
 // Runtime: 1ms (Beats 100%)
 // Memory: 45.15mb (Beats 8.76%)
 
-
 class Solution {
     public List<Integer> findWordsContaining(String[] words, char x) {
         
@@ -13,6 +12,5 @@ class Solution {
             }
         }
         return nIndex;
-    }
-    
+    }   
 }
