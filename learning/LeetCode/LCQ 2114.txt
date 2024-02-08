@@ -1,0 +1,16 @@
+// Runtime: 3ms (Beats 88%)
+// Memory: 44.05mb (Beats 45%)
+
+class Solution {
+    public int mostWordsFound(String[] sentences) {
+        int mWords = 0;
+
+        for (String sentence : sentences) {
+            String[] words = sentence.split(" ");
+            int wCount = words.length;
+            mWords = Math.max(mWords, wCount);
+        }
+
+        return mWords;
+    }
+}
