@@ -1,0 +1,32 @@
+// Runtime: 
+// Memory: 
+
+//Not done by me, but a good solution I saw on Leetcode. 
+
+-Things learned
+You can use toString on a int to get its binary representation.
+
+
+class Solution {
+    public int sumIndicesWithKSetBits(List<Integer> nums, int k) {
+        int ans = 0;
+        for (int i = 0; i < nums.size(); i++) {
+            int curr = nums.get(i);
+            if (binary(i) == k) {
+                ans += curr;
+            }
+        }
+        return ans;
+    }
+    public int binary(int num) {
+        int count = 0;
+        String binary = Integer.toBinaryString(num);
+
+        for (int i = 0; i < binary.length(); i++) {
+            if (binary.charAt(i) == '1') {
+                count++;
+            }
+        }
+        return count;
+    }
+}
